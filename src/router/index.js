@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TeamsMembers from '../components/teams/TeamMembers.vue'
-import TeamsFooter from '../components/teams/TeamsFooter.vue'
-import TeamsList from '../components/teams/TeamsList.vue'
-import UsersFooter from '../components/users/UsersFooter.vue'
-import UsersList from '../components/users/UsersList.vue'
+import TeamsFooter from '../pages/TeamsFooter.vue'
+import TeamsList from '../pages/TeamsList.vue'
+import UsersFooter from '../pages/UsersFooter.vue'
+import UsersList from '../pages/UsersList.vue'
 
 const router = createRouter({
 	history: createWebHistory(),
