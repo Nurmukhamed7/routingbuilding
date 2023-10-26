@@ -8,9 +8,17 @@ const router = createRouter({
 	routes: [
 		{ path: '/', redirect: '/teams' },
 		{
+			name: 'teams',
 			path: '/teams',
 			component: TeamsList,
-			children: [{ path: ':teamId', component: TeamsMembers, props: true }],
+			children: [
+				{
+					name: 'team-members',
+					path: ':teamId',
+					component: TeamsMembers,
+					props: true,
+				},
+			],
 		},
 		{ path: '/users', component: UsersList },
 		{ path: '/:catchAll(.*)', redirect: '/teams' },
