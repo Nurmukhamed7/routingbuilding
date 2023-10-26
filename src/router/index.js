@@ -34,6 +34,13 @@ const router = createRouter({
 		},
 		{ path: '/:catchAll(.*)', redirect: '/teams' },
 	],
+	scrollBehavior(to, from, savedPosition) {
+		console.log(to, from, savedPosition)
+		if (savedPosition) {
+			return savedPosition
+		}
+		return { left: 0, top: 0 }
+	},
 })
 
 export default router
